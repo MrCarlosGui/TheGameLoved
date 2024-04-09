@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("./imagens/fundo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+p{
+    font-family: "Press Start 2P", system-ui;
+    color: #581f56;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 400px ;
+    font-size:22px;
+    
+}
+
+#p2{
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #df0672;
+    font-size: 45px;
+    margin-top: -14px;
+}
+
+form{
+    display: flex; justify-content: center;
+    margin-top: 30px;
+}
+
+label{
+    
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 30px;
+        color: #581f56;
+        background-color: pink;
+      
+}
+
+#div2{
+    background-color: pink;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 15px;
+}
+
+.game-board{
+    width: 80%;
+    height: 500px;
+    border: 3px solid #f763e3;
+    border-bottom: 15px solid #97fccb;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#C3E1FF, #E0F6FF);
+    border-radius: 20px;
+}
+
+.pipe {
+   position: absolute;
+   bottom: 0;
+   width: 80px;
+   animation: pipe-animation 2s infinite linear;
+}
+
+.mario{
+    width: 83px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.jump{
+    
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    position: absolute;
+    width: 500px;
+    margin-top: 20px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes clouds-animation{
+
+    from{
+        right: -500px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to{
+        right:100%;
+    }
+
+
+}
